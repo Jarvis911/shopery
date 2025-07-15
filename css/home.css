@@ -1,0 +1,401 @@
+:root {
+  --Gray-Scale-Gray-500: #6b7280;
+  --Gray-Scale-White: #fff;
+  --Gren-Gray-Scale-900: #002603;
+  --Branding-Success: #00b207;
+  --Gray-Scale-Gray-400: #999;
+  --Gray-Scale-Gray-100: #e5e5e5;
+  --Gray-Scale-Gray-900: #1a1a1a;
+  --Gray-Scale-Gray-800: #333;
+  --Branding-Success-Dark: #2c742f;
+  --Gren-Gray-Scale-50: #edf2ee;
+  --Branding-Warning: #ff8a00;
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--Gray-Scale-White);
+  box-shadow: 0px -0.5px 0px 0px #ccc inset;
+  gap: 24px;
+}
+
+.feature > div {
+  display: flex;
+  padding: 30px 0px;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0px -0.5px 0px 0px #ccc inset;
+  background: var(--Gray-Scale-White);
+}
+
+.feature > div:hover {
+  box-shadow: 0px -3px 0px 0px #00b207 inset;
+  & div:first-child {
+    background: var(--Branding-Success);
+    color: var(--Gray-Scale-White);
+  }
+}
+
+.feature > div > div:first-child {
+  display: flex;
+  color: #00b307;
+  padding: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5000px;
+  background: var(--Gren-Gray-Scale-50);
+}
+
+.feature > div:first-child > div:first-child {
+  padding: 16px;
+}
+
+.feature > div > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+
+  & span:first-child {
+    color: var(--Gray-Scale-Gray-900);
+    /* Body Large/Body Large, 600 */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 27px */
+  }
+
+  & span:nth-child(2) {
+    color: var(--Gray-Scale-Gray-400);
+    /* Body Small/Body Small, 400 */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+}
+
+.left-categories-menu-banner-container {
+  display: flex;
+  margin-top: 24px;
+  gap: 24px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  background-image: url("../assets/images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__frame {
+  position: absolute;
+  gap: 32px;
+  top: 141.5px;
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.banner__frame > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  & > span {
+    color: var(--Gray-Scale-White);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+
+    & > div {
+      width: 2px;
+      height: 48px;
+      background: var(--Branding-Success);
+    }
+
+    & span span {
+      color: var(--Gray-Scale-White);
+    }
+  }
+}
+
+.btn-shop-now {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  border-radius: 43px;
+  background: var(--Branding-Success, #00b207);
+
+  & span {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--Gray-Scale-White, #fff);
+  }
+}
+
+.left-categories-menu {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--Gray-Scale-Gray-100);
+  background: var(--Gray-Scale-White);
+  color: var(--Gray-Scale-Gray-900, #1a1a1a);
+  /* Body Small/Body Small, 400 */
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+
+  & svg {
+    color: var(--Gray-Scale-Gray-400);
+  }
+}
+
+.left-categories-menu > div {
+  box-sizing: border-box;
+  width: 312px;
+  display: flex;
+  padding: 16px 28px 16px 20px;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.left-categories-menu > div:last-child {
+  border: 1px solid var(--Gray-Scale-Gray-100);
+}
+
+.left-categories-menu > div:hover {
+  background-color: var(--Branding-Success);
+  color: var(--Gray-Scale-White);
+
+  & svg {
+    color: var(--Gray-Scale-White);
+  }
+}
+
+.main-bannar {
+  font-family: "Poppins";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: flex-start;
+  gap: 24px;
+  width: 100%;
+
+  & > div {
+    height: 536px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > div:last-child {
+      margin-top: 24px;
+      padding: 14px 32px;
+      gap: 12px;
+      border-radius: 43px;
+      background-color: var(--Gray-Scale-White);
+      color: var(--Branding-Success);
+
+      & > span {
+        color: var(--Branding-Success);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+  }
+
+  /* The first two row of the bannar */
+  & > div:first-child {
+    background-image: url(../assets/images/bannar_1.png);
+
+    & > span:first-child {
+      display: block;
+      text-align: center;
+      margin-top: 35px;
+      color: var(--Gray-Scale-White);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.42px;
+    }
+
+    & > span:nth-child(2) {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--Gray-Scale-White);
+      line-height: 120%;
+      margin-top: 16px;
+    }
+  }
+
+  & > div:nth-child(2) {
+    background-image: url(../assets/images/bannar_2.png);
+
+    & > span:first-child {
+      display: block;
+      text-align: center;
+      margin-top: 35px;
+      color: var(--Gray-Scale-White);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.42px;
+    }
+
+    & > span:nth-child(2) {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--Gray-Scale-White);
+      line-height: 120%;
+      margin-top: 16px;
+    }
+  }
+
+  & > div:nth-child(3) {
+    background-image: url(../assets/images/bannar_3.png);
+
+    & > span:first-child {
+      display: block;
+      text-align: center;
+      margin-top: 35px;
+      color: var(--Gray-Scale-Gray-900);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.42px;
+    }
+
+    & > span:nth-child(2) {
+      display: block;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--Gray-Scale-Gray-900);
+      line-height: 120%;
+      margin-top: 16px;
+    }
+  }
+}
+
+/* Timer of the first bannar */
+.main-bannar__timer {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  & div span:first-child {
+    color: var(--Gray-Scale-White);
+    text-align: center;
+    width: 3.5rem;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  & div span:nth-child(2) {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+  }
+
+  & > span {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+/* Started at of the second bannar */
+.main-bannar__started-at {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12.5px;
+
+  & > span:first-child {
+    color: var(--Gray-Scale-White);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  & > span:nth-child(2) {
+    color: var(--Branding-Warning);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+}
+
+/* Sale percent of the third bannar */
+.main-bannar__sale-percent {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+
+  & > div {
+    display: flex;
+    padding: 6px 12px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--Gray-Scale-Gray-900);
+    color: #fcc900;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+}

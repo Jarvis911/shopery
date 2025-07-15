@@ -10,12 +10,16 @@
   --Branding-Success-Dark: #2c742f;
 }
 
-body {
+html {
+  padding: 0 24px;
+}
+
+header {
   font-family: "Poppins", "Arial";
 }
 
 .navigation {
-  width: 1320px;
+  width: 100%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +67,7 @@ body {
 
 .middle {
   display: flex;
-  width: 1320px;
+  width: 100%;
   padding: 20px 0px;
   justify-content: space-between;
   align-items: center;
@@ -180,7 +184,7 @@ body {
 
 .nav-links {
   display: flex;
-  width: 1320px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: var(--Gray-Scale-Gray-900);
@@ -188,7 +192,7 @@ body {
 
 .page-icons {
   display: flex;
-  padding: 12px 24px 12px 0px;
+  padding: 11px 24px 11px 0px;
   align-items: center;
   gap: 24px;
 }
@@ -240,8 +244,9 @@ body {
   color: var(--Gray-Scale-White, #FFF);
 }
 
-.page-links > :first-child {
+.page-links > div:first-child {
   display: flex;
+  background: var(--Gray-Scale-Gray-800);
   padding-right: 24px;
   align-items: center;
   gap: 16px;
@@ -259,6 +264,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding-right: 8px;
   color: var(--Gray-Scale-White);
   /* Body Medium/Body Medium, 500 */
   font-family: "Poppins";
