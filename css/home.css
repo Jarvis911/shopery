@@ -399,3 +399,57 @@ header {
     line-height: 150%;
   }
 }
+
+/* Top category */
+.top-category {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  font-family: "Poppins";
+}
+
+.top-category__heading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  & span:first-child {
+    color: var(--Branding-Success);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+  }
+
+  & span:nth-child(2) {
+    color: var(--Gray-Scale-Gray-900);
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+
+.top-category__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  column-gap: 24px;
+  row-gap: 24px;
+  margin-top: 36px;
+
+  & > div {
+    display: inline-flex;
+    padding: 16px 0px 24px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--Gray-Scale-Gray-100);
+    background: var(--Gray-Scale-White);
+  }
+}
