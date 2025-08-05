@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/11_product_details.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
   <title>document</title>
 </head>
 
@@ -79,7 +84,7 @@
 
       <div class="navigation_middle_icon_info">
         <span>Shopping cart:</span>
-        <span>$0.00</span>
+        <span id='cart-total'>$0.00</span>
       </div>
     </div>
 
@@ -141,22 +146,514 @@
   <div class="breadcrumbs">
     <div class="breadcrumbs_location">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M4 10L12 3L20 10V20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2044 9 16V20H4V10Z" stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-  <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<span>Category</span>
-<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-  <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<span>Vegatable</span>
-<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-  <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<span style="color: var(--Branding-Success, #00B207);" >Chinese Cabbage</span>
+        <path
+          d="M4 10L12 3L20 10V20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2044 9 16V20H4V10Z"
+          stroke="#999999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+        <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      <span>Category</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+        <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      <span>Vegatable</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+        <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#999999" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      <span style="color: var(--Branding-Success, #00B207);">Chinese Cabbage</span>
     </div>
   </div>
+
+
+  <div class="product-detail">
+    <div class="product-detail_img">
+
+      <div class="product-detail_img_slide">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M19 15.5L12 8.5L5 15.5" stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        <div>
+          <img src="assets/images/slide.jpg" class="thumbnail active" onclick="changeimg(this)">
+          <img src="assets/images/slide2.jpg" class="thumbnail" onclick="changeimg(this)">
+          <img src="assets/images/slide 3.jpg" class="thumbnail" onclick="changeimg(this)">
+          <img src="assets/images/slide4.jpg" class="thumbnail" onclick="changeimg(this)">
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M19 8.5L12 15.5L5 8.5" stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+      <img class="main_thumbnail" id="main_thumbnail" src="assets/images/slide.jpg">
+    </div>
+
+    <div class="product-detail_purchase">
+
+      <div class="product-detail_purchase_introduce">
+        <div class="product-detail_purchase_introduce_info">
+          <div class="product-detail_purchase_introduce_info_name">
+            <span>Chinese Cabbage</span>
+            <span>In Stock</span>
+          </div>
+
+          <div class="product-detail_purchase_introduce_info_rating">
+            <div>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path
+                    d="M8.31008 11.9111L11.8566 14.1577C12.31 14.4446 12.8725 14.0176 12.7381 13.4883L11.7138 9.45802C11.6848 9.34576 11.6882 9.22761 11.7234 9.11715C11.7586 9.0067 11.8243 8.90843 11.9129 8.83365L15.0933 6.18708C15.5106 5.83946 15.2958 5.1459 14.7586 5.11102L10.6056 4.84102C10.4938 4.83309 10.3866 4.79356 10.2964 4.72704C10.2061 4.66052 10.1367 4.56974 10.096 4.46527L8.5469 0.564897C8.50472 0.45405 8.42984 0.358643 8.33219 0.291325C8.23455 0.224007 8.11875 0.187958 8.00015 0.187958C7.88155 0.187958 7.76575 0.224007 7.6681 0.291325C7.57046 0.358643 7.49558 0.45405 7.4534 0.564897L5.90427 4.46527C5.86372 4.56985 5.79429 4.66074 5.70406 4.72737C5.61383 4.79399 5.50652 4.83361 5.39465 4.84158L1.24171 5.11158C0.705084 5.1459 0.489084 5.83946 0.907022 6.18708L4.0874 8.83421C4.17588 8.90895 4.2415 9.00712 4.27673 9.11746C4.31195 9.2278 4.31534 9.34584 4.28652 9.45802L3.33702 13.1958C3.17558 13.8309 3.85115 14.3433 4.39452 13.9985L7.69077 11.9111C7.78342 11.8522 7.89093 11.8209 8.00071 11.8209C8.11049 11.8209 8.218 11.8522 8.31065 11.9111H8.31008Z"
+                    fill="#FF8A00" />
+                </svg>
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path
+                    d="M8.31008 11.9111L11.8566 14.1577C12.31 14.4446 12.8725 14.0176 12.7381 13.4883L11.7138 9.45802C11.6848 9.34576 11.6882 9.22761 11.7234 9.11715C11.7586 9.0067 11.8243 8.90843 11.9129 8.83365L15.0933 6.18708C15.5106 5.83946 15.2958 5.1459 14.7586 5.11102L10.6056 4.84102C10.4938 4.83309 10.3866 4.79356 10.2964 4.72704C10.2061 4.66052 10.1367 4.56974 10.096 4.46527L8.5469 0.564897C8.50472 0.45405 8.42984 0.358643 8.33219 0.291325C8.23455 0.224007 8.11875 0.187958 8.00015 0.187958C7.88155 0.187958 7.76575 0.224007 7.6681 0.291325C7.57046 0.358643 7.49558 0.45405 7.4534 0.564897L5.90427 4.46527C5.86372 4.56985 5.79429 4.66074 5.70406 4.72737C5.61383 4.79399 5.50652 4.83361 5.39465 4.84158L1.24171 5.11158C0.705084 5.1459 0.489084 5.83946 0.907022 6.18708L4.0874 8.83421C4.17588 8.90895 4.2415 9.00712 4.27673 9.11746C4.31195 9.2278 4.31534 9.34584 4.28652 9.45802L3.33702 13.1958C3.17558 13.8309 3.85115 14.3433 4.39452 13.9985L7.69077 11.9111C7.78342 11.8522 7.89093 11.8209 8.00071 11.8209C8.11049 11.8209 8.218 11.8522 8.31065 11.9111H8.31008Z"
+                    fill="#FF8A00" />
+                </svg>
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path
+                    d="M8.31008 11.9111L11.8566 14.1577C12.31 14.4446 12.8725 14.0176 12.7381 13.4883L11.7138 9.45802C11.6848 9.34576 11.6882 9.22761 11.7234 9.11715C11.7586 9.0067 11.8243 8.90843 11.9129 8.83365L15.0933 6.18708C15.5106 5.83946 15.2958 5.1459 14.7586 5.11102L10.6056 4.84102C10.4938 4.83309 10.3866 4.79356 10.2964 4.72704C10.2061 4.66052 10.1367 4.56974 10.096 4.46527L8.5469 0.564897C8.50472 0.45405 8.42984 0.358643 8.33219 0.291325C8.23455 0.224007 8.11875 0.187958 8.00015 0.187958C7.88155 0.187958 7.76575 0.224007 7.6681 0.291325C7.57046 0.358643 7.49558 0.45405 7.4534 0.564897L5.90427 4.46527C5.86372 4.56985 5.79429 4.66074 5.70406 4.72737C5.61383 4.79399 5.50652 4.83361 5.39465 4.84158L1.24171 5.11158C0.705084 5.1459 0.489084 5.83946 0.907022 6.18708L4.0874 8.83421C4.17588 8.90895 4.2415 9.00712 4.27673 9.11746C4.31195 9.2278 4.31534 9.34584 4.28652 9.45802L3.33702 13.1958C3.17558 13.8309 3.85115 14.3433 4.39452 13.9985L7.69077 11.9111C7.78342 11.8522 7.89093 11.8209 8.00071 11.8209C8.11049 11.8209 8.218 11.8522 8.31065 11.9111H8.31008Z"
+                    fill="#FF8A00" />
+                </svg>
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path
+                    d="M8.31008 11.9111L11.8566 14.1577C12.31 14.4446 12.8725 14.0176 12.7381 13.4883L11.7138 9.45802C11.6848 9.34576 11.6882 9.22761 11.7234 9.11715C11.7586 9.0067 11.8243 8.90843 11.9129 8.83365L15.0933 6.18708C15.5106 5.83946 15.2958 5.1459 14.7586 5.11102L10.6056 4.84102C10.4938 4.83309 10.3866 4.79356 10.2964 4.72704C10.2061 4.66052 10.1367 4.56974 10.096 4.46527L8.5469 0.564897C8.50472 0.45405 8.42984 0.358643 8.33219 0.291325C8.23455 0.224007 8.11875 0.187958 8.00015 0.187958C7.88155 0.187958 7.76575 0.224007 7.6681 0.291325C7.57046 0.358643 7.49558 0.45405 7.4534 0.564897L5.90427 4.46527C5.86372 4.56985 5.79429 4.66074 5.70406 4.72737C5.61383 4.79399 5.50652 4.83361 5.39465 4.84158L1.24171 5.11158C0.705084 5.1459 0.489084 5.83946 0.907022 6.18708L4.0874 8.83421C4.17588 8.90895 4.2415 9.00712 4.27673 9.11746C4.31195 9.2278 4.31534 9.34584 4.28652 9.45802L3.33702 13.1958C3.17558 13.8309 3.85115 14.3433 4.39452 13.9985L7.69077 11.9111C7.78342 11.8522 7.89093 11.8209 8.00071 11.8209C8.11049 11.8209 8.218 11.8522 8.31065 11.9111H8.31008Z"
+                    fill="#FF8A00" />
+                </svg>
+              </span>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                  <path
+                    d="M8.31008 11.9111L11.8566 14.1577C12.31 14.4446 12.8725 14.0176 12.7381 13.4883L11.7138 9.45802C11.6848 9.34576 11.6882 9.22761 11.7234 9.11715C11.7586 9.0067 11.8243 8.90843 11.9129 8.83365L15.0933 6.18708C15.5106 5.83946 15.2958 5.1459 14.7586 5.11102L10.6056 4.84102C10.4938 4.83309 10.3866 4.79356 10.2964 4.72704C10.2061 4.66052 10.1367 4.56974 10.096 4.46527L8.5469 0.564897C8.50472 0.45405 8.42984 0.358643 8.33219 0.291325C8.23455 0.224007 8.11875 0.187958 8.00015 0.187958C7.88155 0.187958 7.76575 0.224007 7.6681 0.291325C7.57046 0.358643 7.49558 0.45405 7.4534 0.564897L5.90427 4.46527C5.86372 4.56985 5.79429 4.66074 5.70406 4.72737C5.61383 4.79399 5.50652 4.83361 5.39465 4.84158L1.24171 5.11158C0.705084 5.1459 0.489084 5.83946 0.907022 6.18708L4.0874 8.83421C4.17588 8.90895 4.2415 9.00712 4.27673 9.11746C4.31195 9.2278 4.31534 9.34584 4.28652 9.45802L3.33702 13.1958C3.17558 13.8309 3.85115 14.3433 4.39452 13.9985L7.69077 11.9111C7.78342 11.8522 7.89093 11.8209 8.00071 11.8209C8.11049 11.8209 8.218 11.8522 8.31065 11.9111H8.31008Z"
+                    fill="#FF8A00" />
+                </svg>
+              </span>
+              <span>4 Review</span>
+            </div>
+
+            <div>•</div>
+
+            <div>
+              <span>SKU:</span>
+              <span>2,51,594</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="product-detail_purchase_introduce_info_discount">
+          <span>$48.00</span>
+          <span>$17.28</span>
+          <span>64% Off</span>
+        </div>
+
+
+      </div>
+
+      <hr class="line">
+
+      <div class="product-detail_purchase_brand">
+        <div class="product-detail_purchase_brand_contain">
+          <div class="product-detail_purchase_brand_contain_logo">
+            <span>Brand:</span>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="14" viewBox="0 0 32 14" fill="none">
+                <path
+                  d="M5.13333 7.00159C17.2644 -5.59603 31.2617 7.00159 31.2617 7.00159C31.2617 7.00159 17.2644 19.5992 5.13333 7.00159Z"
+                  fill="#36C63F" />
+                <path
+                  d="M22.8938 12.196C27.954 10.6073 31.4454 7.49925 31.5916 7.36769L32 7.00006L31.5916 6.63244C31.4454 6.50087 27.954 3.39274 22.8938 1.80404C19.902 0.864788 16.9897 0.661537 14.2377 1.20004C10.858 1.86129 7.72564 3.64642 4.92432 6.50543L-2.44735e-07 6.50543L-2.87974e-07 7.49463L4.92432 7.49463C7.7257 10.3536 10.8579 12.1388 14.2377 12.8C16.9897 13.3385 19.9021 13.1353 22.8938 12.196ZM14.4097 11.8258C11.5163 11.256 8.80595 9.80057 6.33845 7.49463L13.3259 7.49463L15.9805 10.1493L16.6798 9.44982L14.7247 7.49469L20.5294 7.49469L20.5294 6.5055L17.0575 6.5055L19.0127 4.5503L18.3133 3.85092L15.6587 6.5055L10.992 6.5055L12.4806 5.01687L11.7812 4.31749L9.59314 6.50556L6.33839 6.50556C8.80595 4.19961 11.5163 2.74417 14.4097 2.17429C16.9942 1.66529 19.7388 1.8551 22.5674 2.73842C26.4272 3.9438 29.4068 6.133 30.4887 7.00013C29.4067 7.86732 26.4272 10.0564 22.5674 11.2618C19.7389 12.1451 16.9942 12.3349 14.4097 11.8258Z"
+                  fill="#009F06" />
+                <path opacity="0.3"
+                  d="M22.3945 7.49332L22.3945 6.50421L21.4615 6.50421L21.4615 7.49332L22.3945 7.49332Z" fill="white" />
+                <path opacity="0.2"
+                  d="M24.2617 7.49332L24.2617 6.50421L23.3287 6.50421L23.3287 7.49332L24.2617 7.49332Z"
+                  fill="#1A1A1A" />
+              </svg>
+              <span>farmary</span>
+            </div>
+          </div>
+          <div class="product-detail_purchase_brand_contain_social">
+            <span>Share item:</span>
+            <div class="footer_head_social-media">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M11.9981 2.98875H13.6414V0.12675C13.3579 0.08775 12.3829 0 11.2474 0C8.87813 0 7.25513 1.49025 7.25513 4.22925V6.75H4.64062V9.9495H7.25513V18H10.4606V9.95025H12.9694L13.3676 6.75075H10.4599V4.5465C10.4606 3.62175 10.7096 2.98875 11.9981 2.98875Z"
+                    fill="white" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <circle cx="20" cy="20" r="20" fill="#00B307" />
+                </svg>
+              </div>
+
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M18 3.41888C17.3306 3.7125 16.6174 3.90713 15.8737 4.00163C16.6388 3.54488 17.2226 2.82713 17.4971 1.962C16.7839 2.38725 15.9964 2.68763 15.1571 2.85525C14.4799 2.13413 13.5146 1.6875 12.4616 1.6875C10.4186 1.6875 8.77387 3.34575 8.77387 5.37863C8.77387 5.67113 8.79862 5.95238 8.85938 6.22013C5.7915 6.0705 3.07687 4.60013 1.25325 2.36025C0.934875 2.91263 0.748125 3.54488 0.748125 4.2255C0.748125 5.5035 1.40625 6.63638 2.38725 7.29225C1.79437 7.281 1.21275 7.10888 0.72 6.83775C0.72 6.849 0.72 6.86363 0.72 6.87825C0.72 8.6715 1.99912 10.161 3.6765 10.5041C3.37612 10.5863 3.04875 10.6256 2.709 10.6256C2.47275 10.6256 2.23425 10.6121 2.01038 10.5626C2.4885 12.024 3.84525 13.0984 5.4585 13.1333C4.203 14.1154 2.60888 14.7071 0.883125 14.7071C0.5805 14.7071 0.29025 14.6936 0 14.6565C1.63462 15.7106 3.57188 16.3125 5.661 16.3125C12.4515 16.3125 16.164 10.6875 16.164 5.81175C16.164 5.64863 16.1584 5.49113 16.1505 5.33475C16.8829 4.815 17.4982 4.16588 18 3.41888Z"
+                    fill="#4D4D4D" />
+                </svg>
+              </div>
+
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path
+                    d="M9.24446 0C4.31112 0 1.6875 3.16139 1.6875 6.60855C1.6875 8.20724 2.58079 10.2008 4.01073 10.8331C4.22786 10.931 4.34599 10.8894 4.39437 10.688C4.43712 10.535 4.62501 9.79807 4.71614 9.45042C4.74426 9.33904 4.72964 9.24229 4.63963 9.13766C4.16486 8.58864 3.78797 7.58847 3.78797 6.65017C3.78797 4.24594 5.69943 1.91146 8.95195 1.91146C11.7646 1.91146 13.7323 3.73854 13.7323 6.35204C13.7323 9.30529 12.1696 11.3484 10.1389 11.3484C9.01495 11.3484 8.17792 10.4663 8.44343 9.37505C8.76407 8.07561 9.39297 6.6783 9.39297 5.74113C9.39297 4.90072 8.9182 4.20544 7.94841 4.20544C6.80423 4.20544 5.87606 5.33837 5.87606 6.85943C5.87606 7.82585 6.21808 8.47838 6.21808 8.47838C6.21808 8.47838 5.08628 13.0506 4.87589 13.9045C4.52038 15.3502 4.92427 17.6914 4.95915 17.8928C4.98052 18.0042 5.1054 18.0391 5.17516 17.9479C5.28654 17.8017 6.6546 15.8497 7.03824 14.4389C7.17775 13.9248 7.7504 11.84 7.7504 11.84C8.12729 12.5207 9.21521 13.0911 10.374 13.0911C13.8212 13.0911 16.312 10.0613 16.312 6.30141C16.2997 2.69675 13.2148 0 9.24446 0Z"
+                    fill="#4D4D4D" />
+                </svg>
+              </div>
+
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <g clip-path="url(#clip0_41678_7771)">
+                    <path
+                      d="M17.982 5.29205C17.9398 4.33564 17.7852 3.67812 17.5636 3.10836C17.335 2.50359 16.9834 1.96213 16.5227 1.51201C16.0726 1.05489 15.5276 0.699691 14.9298 0.474702C14.3568 0.253147 13.7027 0.0984842 12.7463 0.0563159C11.7827 0.0105764 11.4768 0 9.03299 0C6.58916 0 6.28327 0.0105764 5.32329 0.0527447C4.36688 0.0949129 3.70936 0.249713 3.13975 0.471131C2.53483 0.699691 1.99338 1.05132 1.54326 1.51201C1.08614 1.96213 0.731077 2.50716 0.505951 3.10493C0.284397 3.67812 0.129734 4.33207 0.0875658 5.28848C0.0418264 6.25203 0.03125 6.55792 0.03125 9.00176C0.03125 11.4456 0.0418264 11.7515 0.0839946 12.7115C0.126163 13.6679 0.280963 14.3254 0.502517 14.8952C0.731077 15.4999 1.08614 16.0414 1.54326 16.4915C1.99338 16.9486 2.5384 17.3038 3.13618 17.5288C3.70936 17.7504 4.36331 17.905 5.31986 17.9472C6.2797 17.9895 6.58573 17.9999 9.02956 17.9999C11.4734 17.9999 11.7793 17.9895 12.7393 17.9472C13.6957 17.905 14.3532 17.7504 14.9228 17.5288C16.1325 17.0611 17.0889 16.1047 17.5566 14.8952C17.778 14.322 17.9328 13.6679 17.975 12.7115C18.0172 11.7515 18.0277 11.4456 18.0277 9.00176C18.0277 6.55792 18.0242 6.25203 17.982 5.29205ZM16.3611 12.6411C16.3223 13.5202 16.1747 13.9949 16.0516 14.3114C15.7491 15.0956 15.1268 15.7179 14.3426 16.0204C14.0261 16.1434 13.548 16.2911 12.6724 16.3297C11.723 16.372 11.4382 16.3824 9.03657 16.3824C6.6349 16.3824 6.34659 16.372 5.40062 16.3297C4.52155 16.2911 4.04684 16.1434 3.73038 16.0204C3.34015 15.8761 2.98495 15.6476 2.69664 15.3487C2.39775 15.0568 2.16919 14.7052 2.02497 14.315C1.9019 13.9985 1.75424 13.5202 1.71564 12.6447C1.67334 11.6953 1.6629 11.4104 1.6629 9.00876C1.6629 6.60709 1.67334 6.31878 1.71564 5.37295C1.75424 4.49387 1.9019 4.01917 2.02497 3.7027C2.16919 3.31234 2.39775 2.95727 2.70021 2.66883C2.99195 2.36994 3.34358 2.14138 3.73395 1.99729C4.05042 1.87422 4.52869 1.72656 5.40419 1.68783C6.3536 1.64566 6.63847 1.63508 9.04 1.63508C11.4452 1.63508 11.73 1.64566 12.6759 1.68783C13.555 1.72656 14.0297 1.87422 14.3462 1.99729C14.7364 2.14138 15.0916 2.36994 15.3799 2.66883C15.6788 2.96071 15.9074 3.31234 16.0516 3.7027C16.1747 4.01917 16.3223 4.49731 16.3611 5.37295C16.4032 6.32236 16.4138 6.60709 16.4138 9.00876C16.4138 11.4104 16.4032 11.6917 16.3611 12.6411Z"
+                      fill="#4D4D4D" />
+                    <path
+                      d="M9.03313 4.37769C6.48037 4.37769 4.40918 6.44874 4.40918 9.00164C4.40918 11.5545 6.48037 13.6256 9.03313 13.6256C11.586 13.6256 13.6571 11.5545 13.6571 9.00164C13.6571 6.44874 11.586 4.37769 9.03313 4.37769ZM9.03313 12.0011C7.37703 12.0011 6.03369 10.6579 6.03369 9.00164C6.03369 7.3454 7.37703 6.00219 9.03313 6.00219C10.6894 6.00219 12.0326 7.3454 12.0326 9.00164C12.0326 10.6579 10.6894 12.0011 9.03313 12.0011Z"
+                      fill="#4D4D4D" />
+                    <path
+                      d="M14.9199 4.19496C14.9199 4.79109 14.4365 5.27445 13.8402 5.27445C13.2441 5.27445 12.7607 4.79109 12.7607 4.19496C12.7607 3.5987 13.2441 3.11548 13.8402 3.11548C14.4365 3.11548 14.9199 3.5987 14.9199 4.19496Z"
+                      fill="#4D4D4D" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_41678_7771">
+                      <rect width="18" height="18" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <span>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh
+          diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </span>
+      </div>
+      <hr class="line">
+
+      <div class="product-detail_purchase_add">
+        <div class="product-detail_purchase_add_quantity">
+          <button class="product-detail_purchase_add_quantity_minus" onclick="changequantity(-1)"><svg
+              xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2.33398 7H11.6673" stroke="#666666" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></button>
+          <Span id="quantity">1</Span>
+          <button class="product-detail_purchase_add_quantity_plus" onclick="changequantity(+1)"><svg
+              xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2.33398 6.99998H11.6673M7.00065 2.33331V11.6666V2.33331Z" stroke="#1A1A1A" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg></button>
+        </div>
+
+        <button class="product-detail_purchase_add_to-cart" onclick="addtocardt()">
+          <Span>Add to Cart</Span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M5.66667 7.33333H3.16667L1.5 16.5H16.5L14.8333 7.33333H12.3333M5.66667 7.33333V4.83333C5.66667 2.99239 7.15905 1.5 9 1.5V1.5C10.8409 1.5 12.3333 2.99238 12.3333 4.83333V7.33333M5.66667 7.33333H12.3333M5.66667 7.33333V9.83333M12.3333 7.33333V9.83333"
+              stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+
+
+        <svg id="product-detail_purchase_add_heart" onclick="fillheart()" xmlns="http://www.w3.org/2000/svg" width="20"
+          height="20" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M9.9996 17.5451C-6.66672 8.33336 4.99993 -1.66664 9.9996 4.65674C14.9999 -1.66664 26.6666 8.33336 9.9996 17.5451Z"
+            stroke="#2C742F" stroke-width="1.5" />
+        </svg>
+
+      </div>
+
+      <hr class="line">
+
+      <div class="product-detail_purchase_detail">
+        <div class="product-detail_purchase_detail_category">
+          <span>
+            Category:
+          </span>
+          <span>
+            Vegetables
+          </span>
+        </div>
+
+
+        <div class="product-detail_purchase_detail_tag">
+          <span>Tag:</span>
+          <span>Vegetables</span>
+          <span>Healthy</span>
+          <span>Chinese</span>
+          <span>Chinese</span>
+          <span>Green Cabbage</span>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="product-detail_description">
+    <div class="product-detail_description_head">
+      <span class="tab active" onclick="changetab('description')">Descriptions</span>
+      <span class="tab" onclick="changetab('info')">Additional Information</span>
+      <span class="tab" onclick="changtab('feedback')">Customer Feedback</span>
+    </div>
+
+    <div class="product-detail_description_body">
+      <div class="product-detail_description_body_left">
+
+        <div id="description" class="tabcontent active">
+          <div class="product-detail_description_body_left_description">
+
+            <span>
+              Sed commodo aliquam dui ac porta. Fusce ipsum felis, imperdiet at posuere ac, viverra at mauris. Maecenas
+              tincidunt ligula a sem vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel.
+              Etiam tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci vitae, aliquam
+              mollis lacus. Sed et condimentum arcu, id molestie tellus. Nulla facilisi. Nam scelerisque vitae justo a
+              convallis. Morbi urna ipsum, placerat quis commodo quis, egestas elementum leo. Donec convallis mollis
+              enim.
+              Aliquam id mi quam. Phasellus nec fringilla elit.<br>
+              <br>
+              Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus faucibus elementum
+              tincidunt, turpis mi viverra velit, pellentesque tristique neque mi eget nulla. Proin luctus elementum
+              neque
+              et pharetra.
+            </span>
+
+            <div>
+
+              <div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M10.4173 3.125L4.68815 8.85417L2.08398 6.25" stroke="white" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>100 g of fresh leaves provides.</span>
+              </div>
+
+              <div>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M10.4173 3.125L4.68815 8.85417L2.08398 6.25" stroke="white" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+                <span>Aliquam ac est at augue volutpat elementum.</span>
+              </div>
+
+              <div>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M10.4173 3.125L4.68815 8.85417L2.08398 6.25" stroke="white" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+                <span>Quisque nec enim eget sapien molestie.</span>
+              </div>
+
+              <div>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M10.4173 3.125L4.68815 8.85417L2.08398 6.25" stroke="white" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg></span>
+                <span>Proin convallis odio volutpat finibus posuere.</span>
+              </div>
+
+            </div>
+
+            <span>Cras et diam maximus, accumsan sapien et, sollicitudin velit. Nulla blandit eros non turpis lobortis
+              iaculis at ut massa. </span>
+
+
+          </div>
+        </div>
+
+        <div id="info" class="tabcontent">
+          <div class="product-detail_description_body_left_info">
+            <div>
+              <span>Weight:</span>
+              <span>03</span>
+            </div>
+
+            <div>
+              <span>Color:</span>
+              <span>Green</span>
+            </div>
+            <div>
+              <span>Type:</span>
+              <span>Organic</span>
+            </div>
+            <div>
+              <span>Category:</span>
+              <span>Vegetables</span>
+            </div>
+            <div>
+              <span>Stock Status:</span>
+              <span>Available (5,413)</span>
+            </div>
+            <div>
+              <span>Tags:</span>
+              <span>Vegetables,</span>
+              <span> Healthy,</span>
+              <span> Chinese,</span>
+              <span> Cabbage,</span>
+              <span> Green Cabbage,</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="product-detail_description_body_right active">
+        <div class="product-detail_description_body_right_play-vid ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <circle cx="25" cy="25" r="25" fill="#00B307" />
+            <path d="M20 16V34L34 25L20 16Z" fill="white" />
+          </svg>
+        </div>
+
+        <div class="product-detail_description_body_right_feature ">
+          <div class="product-detail_description_body_right_feature_info " style="margin-right:22px;">
+
+            <div class="product-detail_description_body_right_feature_info_discount">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                <g clip-path="url(#clip0_460_43081)">
+                  <path
+                    d="M28.0671 24.7501C28.326 24.7501 28.5359 24.5402 28.5359 24.2813V13.0313C28.5359 12.4718 28.3178 11.8995 27.9219 11.4198L24.4454 7.20769C24.2633 6.987 24.0539 6.801 23.8265 6.65287C23.8405 6.50962 23.8484 6.36494 23.8484 6.21887V0.968872C23.8484 0.709997 23.6385 0.500122 23.3797 0.500122C23.1208 0.500122 22.9109 0.709997 22.9109 0.968872C22.9109 0.968872 22.91 6.26356 22.9096 6.28593C22.7762 6.26231 22.6409 6.25012 22.5047 6.25012H16.4422C16.0154 6.25012 15.597 6.36987 15.2224 6.58994C15.2062 6.59575 15.1902 6.60225 15.1744 6.60994L10.605 8.83568C10.0987 9.08962 9.69392 9.51556 9.46498 10.035C9.46248 10.0407 9.46011 10.0464 9.45786 10.0521L7.56861 14.8441C7.47367 15.085 7.59192 15.3572 7.83279 15.4522C7.88923 15.4744 7.94736 15.4849 8.00461 15.4849C8.19148 15.4849 8.36811 15.3724 8.44079 15.188L10.3264 10.4052C10.4682 10.0884 10.7161 9.82887 11.0204 9.67612L13.4347 8.50019L11.0249 11.4199C10.6641 11.857 10.4734 12.4143 10.4734 13.0314V29.2189C10.4734 29.4074 10.49 29.592 10.52 29.7719L5.68992 27.6316C4.59879 27.1482 4.10429 25.864 4.58779 24.769C4.58986 24.7642 4.59186 24.7594 4.59386 24.7547L7.64904 17.1619C7.74567 16.9217 7.62936 16.6487 7.38917 16.5521C7.14886 16.4554 6.87598 16.5718 6.77929 16.8119L3.72679 24.3976C3.04042 25.9632 3.74942 27.7971 5.31011 28.4886L10.9741 30.9984C10.981 31.0014 10.9881 31.0037 10.9951 31.0064C11.57 31.9046 12.5639 32.5001 13.6922 32.5001H25.2547C27.0333 32.5001 28.5359 30.9974 28.5359 29.2188V26.4688C28.5359 26.2099 28.326 26.0001 28.0672 26.0001C27.8083 26.0001 27.5984 26.2099 27.5984 26.4688V29.2188C27.5984 30.4893 26.5251 31.5626 25.2547 31.5626H13.6922C12.4343 31.5626 11.4109 30.5112 11.4109 29.2188V13.0313C11.4109 12.6289 11.5243 12.2875 11.748 12.0166L15.2244 7.80444C15.548 7.41244 15.9919 7.18756 16.4422 7.18756H22.5047C22.593 7.18756 22.681 7.1965 22.7679 7.21337C22.4745 8.21406 21.7476 9.04906 20.766 9.4675C20.5094 9.03819 20.0401 8.75006 19.5046 8.75006C18.6947 8.75006 18.0359 9.40894 18.0359 10.2188C18.0359 11.0287 18.6947 11.6876 19.5046 11.6876C20.2535 11.6876 20.8729 11.1239 20.962 10.3986C22.2244 9.92112 23.179 8.90937 23.6044 7.67444C23.6452 7.7155 23.6847 7.75869 23.7224 7.80444L27.1989 12.0166C27.4565 12.3287 27.5984 12.6891 27.5984 13.0314V24.2814C27.5984 24.5402 27.8082 24.7501 28.0671 24.7501ZM19.5046 10.7501C19.2117 10.7501 18.9734 10.5117 18.9734 10.2188C18.9734 9.92587 19.2117 9.68756 19.5046 9.68756C19.7975 9.68756 20.0359 9.92587 20.0359 10.2188C20.0359 10.5117 19.7975 10.7501 19.5046 10.7501Z"
+                    fill="#00B307" />
+                  <path
+                    d="M15.4424 25.4375C15.5623 25.4375 15.6823 25.3917 15.7738 25.3002L23.7738 17.3002C23.9569 17.1171 23.9569 16.8203 23.7738 16.6373C23.5908 16.4542 23.294 16.4542 23.111 16.6373L15.111 24.6373C14.8121 24.9159 15.0414 25.4517 15.4424 25.4375Z"
+                    fill="#00B307" />
+                  <path
+                    d="M16.4414 20.5C17.5614 20.5 18.4727 19.5887 18.4727 18.4687C18.4727 17.3487 17.5614 16.4375 16.4414 16.4375H16.3789C15.2589 16.4375 14.3477 17.3487 14.3477 18.4687C14.3477 19.5887 15.2589 20.5 16.3789 20.5H16.4414ZM15.2852 18.4687C15.2852 17.8657 15.7758 17.375 16.3789 17.375H16.4414C17.0445 17.375 17.5352 17.8657 17.5352 18.4687C17.5352 19.0718 17.0445 19.5625 16.4414 19.5625H16.3789C15.7758 19.5625 15.2852 19.0718 15.2852 18.4687Z"
+                    fill="#00B307" />
+                  <path
+                    d="M22.5039 25.4375H22.5664C23.6864 25.4375 24.5977 24.5262 24.5977 23.4062C24.5977 22.2862 23.6864 21.375 22.5664 21.375H22.5039C21.3839 21.375 20.4727 22.2862 20.4727 23.4062C20.4727 24.5262 21.3839 25.4375 22.5039 25.4375ZM22.5039 22.3125H22.5664C23.1695 22.3125 23.6602 22.8032 23.6602 23.4062C23.6602 24.0093 23.1695 24.5 22.5664 24.5H22.5039C21.9008 24.5 21.4102 24.0093 21.4102 23.4062C21.4102 22.8032 21.9008 22.3125 22.5039 22.3125Z"
+                    fill="#00B307" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_460_43081">
+                    <rect width="32" height="32" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="product-detail_description_body_right_feature_info_discount_text">
+              <span>64% Discount</span>
+              <span>Save your 64% money with us</span>
+            </div>
+
+          </div>
+
+          <div class="product-detail_description_body_right_feature_info ">
+
+            <div class="product-detail_description_body_right_feature_info_discount">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                <g clip-path="url(#clip0_460_43091)">
+                  <path
+                    d="M31.9759 1.3712C31.9127 1.17858 31.7368 1.04539 31.5343 1.03695C30.5147 0.994517 27.7279 1.00183 23.8822 1.9852C20.3025 2.90064 16.9433 4.40533 14.1675 6.3367C13.9472 6.49002 13.893 6.79283 14.0462 7.01314C14.1994 7.23345 14.5022 7.28777 14.7226 7.13452C17.4039 5.2687 20.6546 3.81377 24.1229 2.92683C25.4189 2.59545 26.7587 2.34389 28.029 2.18627C27.5082 2.4112 26.95 2.67439 26.369 2.98289C22.4401 5.06858 20.245 7.73552 19.032 9.8792C18.8726 9.16395 18.8289 8.34189 18.8286 7.97552C18.8285 7.7072 18.611 7.48977 18.3427 7.48977C18.0743 7.48977 17.8567 7.70733 17.8567 7.9757C17.8567 8.19077 17.8739 9.98302 18.4167 11.0878C17.6686 12.6852 16.9689 14.2821 16.2918 15.8286C16.0042 16.4855 15.7211 17.132 15.4404 17.7649C15.0026 16.9405 14.4256 15.4479 14.5839 13.4956C14.6055 13.2282 14.4063 12.9937 14.1387 12.972C13.872 12.9508 13.6368 13.1496 13.6151 13.4171C13.3877 16.2219 14.503 18.1801 14.9555 18.848C14.1074 20.7223 13.271 22.4484 12.3902 23.9217C11.9367 22.895 11.2263 20.9387 11.2263 18.7604C11.2263 18.492 11.0087 18.2745 10.7404 18.2745C10.472 18.2745 10.2544 18.492 10.2544 18.7604C10.2544 21.6498 11.372 24.1069 11.7742 24.8975C10.8119 26.3353 9.78436 27.4596 8.62367 28.1438C5.08779 24.3037 4.74292 17.0988 10.9201 10.4274C11.6223 9.66902 12.3929 8.94508 13.2107 8.27577C13.4184 8.10577 13.4489 7.79964 13.2789 7.59195C13.1089 7.38427 12.8027 7.35377 12.5951 7.5237C11.7429 8.22133 10.9394 8.97614 10.207 9.76708C3.69104 16.8043 4.05817 24.4746 7.79436 28.6765C4.54073 30.8661 0.514981 31.0029 0.472856 31.0041C0.204731 31.0113 -0.00683118 31.2344 0.000168815 31.5026C0.00710632 31.7665 0.223231 31.9758 0.485731 31.9758C0.490044 31.9758 0.494419 31.9757 0.498731 31.9756C0.685231 31.9707 4.97954 31.83 8.49723 29.3732C9.56311 30.2429 11.235 30.772 13.2621 30.772C15.557 30.772 18.3072 30.0937 21.148 28.4638C23.7798 26.9538 25.6666 24.6438 26.7561 21.5981C27.6891 18.9901 28.0037 15.8521 27.666 12.5234C27.0639 6.58933 29.3056 3.91164 31.8177 1.90202C31.9759 1.77533 32.0389 1.56383 31.9759 1.3712ZM27.6832 5.34633C26.7273 7.34727 26.4054 9.72702 26.699 12.6214C27.0222 15.8071 26.7255 18.798 25.8409 21.2707C24.8315 24.0926 23.0898 26.229 20.6643 27.6208C17.6035 29.377 15.0344 29.7749 13.418 29.7995C11.7655 29.8254 10.3365 29.4726 9.37767 28.8195C10.1757 28.3018 10.9084 27.6075 11.5969 26.7693C11.6348 26.7696 11.6757 26.7698 11.7214 26.7698C12.1986 26.7698 13.0877 26.7493 14.1367 26.6268C16.2354 26.3815 17.8898 25.8636 19.0541 25.0875C19.2774 24.9386 19.3377 24.6369 19.1889 24.4136C19.04 24.1904 18.7383 24.1301 18.515 24.2789C16.7214 25.4746 13.8324 25.7343 12.3412 25.7856C13.2865 24.4374 14.1572 22.8185 15.0159 21.0255C15.8609 21.0234 18.104 20.8406 20.2367 19.1404C20.4465 18.9731 20.481 18.6673 20.3137 18.4575C20.1464 18.2476 19.8407 18.2132 19.6309 18.3805C18.0646 19.6291 16.407 19.9518 15.4841 20.0291C16.0444 18.8166 16.6045 17.5374 17.182 16.2185C17.48 15.5377 17.7827 14.8468 18.0915 14.1512C18.1248 14.152 18.16 14.1525 18.197 14.1525C18.9295 14.1525 20.3882 13.9738 21.9912 12.7861C22.2068 12.6264 22.2521 12.322 22.0923 12.1064C21.9325 11.8908 21.6282 11.8455 21.4125 12.0053C20.4235 12.738 19.5133 13.0133 18.9238 13.1152C18.7809 13.14 18.6501 13.1556 18.5319 13.1656C18.8151 12.5371 19.1042 11.9065 19.401 11.2768C21.2114 7.43527 24.423 5.12058 26.7985 3.85527C27.8283 3.30677 28.7948 2.90214 29.5879 2.61302C28.8911 3.34727 28.2111 4.24133 27.6832 5.34633Z"
+                    fill="#00B307" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_460_43091">
+                    <rect width="32" height="32" fill="white" transform="translate(0 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="product-detail_description_body_right_feature_info_discount_text">
+              <span>100% Organic</span>
+              <span>100% Organic Vegetables</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    let quantities = JSON.parse(localStorage.getItem('quantities')) ||
+    {
+      quantity: 1,
+      count: 0,
+      total: 0
+    };
+
+    document.getElementById('cart-total').textContent = '$' + quantities.total.toFixed(2);
+    document.getElementById('cart-count').textContent = quantities.count;
+
+    function changequantity(amount) {
+      quantities.quantity += amount;
+      if (quantities.quantity < 1) {
+        quantities.quantity = 1;
+      }
+      document.getElementById('quantity').textContent = quantities.quantity
+
+
+    }
+    function addtocardt() {
+      quantities.count += quantities.quantity;
+      quantities.total = quantities.count * 17.28;
+      document.getElementById('cart-count').textContent = quantities.count;
+      document.getElementById('cart-total').textContent = '$' + quantities.total.toFixed(2);
+      quantities.quantity = 1;
+      document.getElementById('quantity').textContent = quantities.quantity;
+      localStorage.setItem('quantities', JSON.stringify(quantities));
+
+
+    }
+
+    function fillheart() {
+      const heartSvg = document.getElementById('product-detail_purchase_add_heart');
+      heartSvg.classList.toggle('active');
+
+      /*if (heartSvg.classList.contains('active')) {
+    heartSvg.classList.remove('active');
+  } else {
+    heartSvg.classList.add('active');
+  }*/
+    }
+
+
+    function changeimg(thumbnail) {
+      let mainthumbnail = document.getElementById("main_thumbnail")
+      mainthumbnail.src = thumbnail.src;
+
+      let thumbnails = document.querySelectorAll(".thumbnail");
+      thumbnails.forEach(img => img.classList.remove("active"));
+
+      thumbnail.classList.add("active");
+
+    }
+
+    function changetab(tabid) {
+      document.querySelectorAll(".tabcontent").forEach(tabcontent => tabcontent.classList.remove("active"));
+      document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
+      document.getElementById(tabid).classList.add("active");
+      let tabchange = [...document.querySelectorAll(".tab")].find(tab => tab.textContent.replace(/\s/g, '').toLowerCase().includes(tabid));
+      tabchange.classList.add("active");
+    }
+  </script>
 </body>
 
 </html>
