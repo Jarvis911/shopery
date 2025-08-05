@@ -1,0 +1,210 @@
+:root {
+  --Gray-Scale-Gray-500: #6b7280;
+  --Gray-Scale-White: #fff;
+  --Gren-Gray-Scale-900: #002603;
+  --Branding-Success: #00b207;
+  --Gray-Scale-Gray-400: #999;
+  --Gray-Scale-Gray-100: #e5e5e5;
+  --Gray-Scale-Gray-900: #1a1a1a;
+  --Gray-Scale-Gray-800: #333;
+  --Branding-Success-Dark: #2c742f;
+  --Gren-Gray-Scale-50: #edf2ee;
+  --Branding-Warning: #ff8a00;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Breadcumb for navigation */
+.breadcumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--Gray-Scale-Gray-600, #666);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 24px 0px;
+}
+
+.breadcumb__text2 {
+  color: var(--Branding-Success, #00B207);
+}
+
+
+/* Discount bannar */
+
+
+.discount_bannar {
+  display: flex;
+  align-items: center;
+  min-width: 590px;
+  flex-shrink: 0;
+  height: 358px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: url(../assets/images/discount_banner.jpg);
+  background-size: cover;
+  background-position: right bottom;
+}
+
+.discount_bannar__text1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  margin-left: 60px;
+  flex-shrink: 0;
+}
+
+.discount_bannar__text3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.discount_bannar__text3 p:first-child {
+  color: var(--Gray-Scale-White, #FFF);
+
+  /* CAPS LOCK/Medium Caps Lock */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  /* 14px */
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.discount_bannar__text3 p:nth-child(2) {
+  width: 424px;
+  color: var(--Gray-Scale-White, #FFF);
+  /* Heading 03/Heading 03 — 600 */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 0px;
+  /* 48px */
+}
+
+.discount_bannar__text2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.discount_bannar__timer {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.discount_bannar__timer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.discount_bannar__timer div p:first-child {
+  color: var(--Branding-Success, #00B207);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0px;
+
+}
+
+.discount_bannar__timer div p:nth-child(2) {
+  color: var(--Gray-Scale-White, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.discount_bannar__timer span {
+  color: var(--Gray-Scale-White, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+.discount_bannar__text1 button {
+  display: flex;
+  padding: 14px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 43px;
+  border: none;
+  background: var(--Branding-Success, #00B207);
+  flex-shrink: 0;
+  color: var(--Gray-Scale-White, #FFF);
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.discount_bannar__text4 {
+  width: 100px;
+  height: 50px;
+  display: inline-flex;
+  padding: 25px 0px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 220px;
+  background: var(--Branding-Warning, #FF8A00);
+  margin: 57px 472px 201px 0px;
+  flex-shrink: 0;
+}
+
+.discount_bannar__text4 p:first-child {
+  color: var(--Gray-Scale-White, #FFF);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin: 0px;
+}
+
+.discount_bannar__text4 p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin: 0px;
+}
