@@ -45,10 +45,9 @@
     function changeimg(thumbnail) {
       let mainthumbnail = document.getElementById("main_thumbnail")
       mainthumbnail.src = thumbnail.src;
-
+      
       let thumbnails = document.querySelectorAll(".thumbnail");
       thumbnails.forEach(img => img.classList.remove("active"));
-
       thumbnail.classList.add("active");
 
     }

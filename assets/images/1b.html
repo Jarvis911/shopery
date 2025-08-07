@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính chỉ số BMI</h1>
+    <div class="box">
+
+        <div>
+            <span>cân nặng</span>
+            <input type="number" id="weight">
+            <span> (kg) </span>
+        </div>
+
+        <div>
+            <span>chieu cao</span>
+            <input type="number" id="height">
+            <span> (m) </span>
+        </div>
+
+    </div>
+    <div id="result"></div>
+
+    <button onclick="change()">
+        tinh
+    </button>
+
+    <script>
+        function change() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value);
+            let kq = document.getElementById('result');
+            if (isNaN(weight) || isNaN(height)) 
+            {
+                kq.innerHTML = "vui long nhap lai";
+            }
+            const bmi=weight/(height*height);
+            if(bmi<18.5){
+                kq.innerHTML='thiếu cân'
+            }
+            if(bmi<25&&bmi>=18.5)
+            {
+                kq.innerHTML="bình thường"
+            }
+            if(bmi>=25&&bmi<=30)
+            {
+                kq.innerHTML="thừa cân"
+            }
+            if(bmi>=30)
+            {
+                  kq.innerHTML="béo phì"
+            }
+           
+
+
+        }
+    </script>
+</body>
+
+</html>
