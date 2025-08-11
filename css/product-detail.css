@@ -1,11 +1,19 @@
-.root {
+:root {
+  --Gray-Scale-Gray-500: #6b7280;
+  --Gray-Scale-White: #fff;
+  --Gren-Gray-Scale-900: #002603;
+  --Branding-Success: #00b207;
+  --Gray-Scale-Gray-400: #999;
+  --Gray-Scale-Gray-100: #e5e5e5;
+  --Gray-Scale-Gray-900: #1a1a1a;
   --Gray-Scale-Gray-800: #333;
-  --Gray-Scale-Gray-300: #B3B3B3;
-  --Branding-Success-Dark: #2C742F;
-
-
+  --Gray-Scale-Gray-600: #666;
+  --Branding-Success-Dark: #2c742f;
+  --Gren-Gray-Scale-50: #edf2ee;
+  --Branding-Warning: #ff8a00;
+  --Gray-Scale-Gray-700: #4d4d4d;
+  --Gray-Scale-Gray-50: #f2f2f2;
 }
-
 
 .navigation_top {
   display: flex;
@@ -15,6 +23,7 @@
   align-items: center;
   background: var(--Gray-Scale-Gray-800, #333);
   box-shadow: 0 1px 0 0 #E5E5E5;
+
 }
 
 .navigation_top_location {
