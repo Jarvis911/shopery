@@ -1,3 +1,4 @@
+
 let quantities = JSON.parse(localStorage.getItem('quantities')) ||
 {
   quantity: 1,
