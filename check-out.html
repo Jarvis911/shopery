@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check out</title>
-    <link rel="stylesheet" href="css/check-out.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check out</title>
+  <link rel="stylesheet" href="css/check-out.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 </head>
 
 <header>
@@ -24,12 +26,12 @@
     <div class="navigation_top_link">
       <div>
         <span>Eng</span>
-        <img src="assets/images/Group.png">
+        <img src="assets/images/Group.png" />
       </div>
 
       <div>
         <span>USD</span>
-        <img src="assets/images/Group.png">
+        <img src="assets/images/Group.png" />
       </div>
 
       <div>
@@ -39,23 +41,21 @@
   </div>
 
   <div class="navigation_middle">
-
     <div class="navigation_middle_logo">
-      <img src="assets/images/plant 1.png">
+      <img src="assets/images/plant 1.png" />
       <span>Ecobazar</span>
     </div>
 
     <div class="navigation_middle_sreach">
       <div>
-        <img src="assets/images/Search (1).svg">
-        <input type="text" placeholder="Search">
+        <img src="assets/images/Search (1).svg" />
+        <input type="text" placeholder="Search" />
       </div>
       <button class="navigation_middle_sreach_button">Search</button>
     </div>
 
     <div class="navigation_middle_icon">
-
-      <span style="cursor: pointer;" id="product-detail_purchase_add_heart" class="navigation_middle_icon_love"
+      <span style="cursor: pointer" id="product-detail_purchase_add_heart" class="navigation_middle_icon_love"
         onclick="fillheart('product-detail_purchase_add_heart')">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
           <path
@@ -63,7 +63,7 @@
             stroke="#1A1A1A" stroke-width="1.5" />
         </svg>
       </span>
-      <hr class="navigation_middle_icon_line">
+      <hr class="navigation_middle_icon_line" />
 
       <div class="navigation_middle_icon_bag">
         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
@@ -76,17 +76,15 @@
 
       <div class="navigation_middle_icon_info">
         <span>Shopping cart:</span>
-        <span id='cart-total'>$0.00</span>
+        <span id="cart-total">$0.00</span>
       </div>
     </div>
-
-
   </div>
 
   <div class="navigation_bottom">
     <div class="navigation_bottom_nav-link">
       <div>
-        <span style="color:var(--Branding-Success, #00B207) ;">Home</span>
+        <span style="color: var(--Branding-Success, #00b207)">Home</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
           <path d="M1.33268 1.66667L5.99935 6.33334L10.666 1.66667" stroke="#00B307" stroke-width="1.5"
             stroke-linecap="round" stroke-linejoin="round" />
@@ -132,9 +130,91 @@
       <span>(219) 555-0114</span>
     </div>
   </div>
+
+  <div class="breadcrumb-middle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path
+        d="M4 10L12 3L20 10V20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2044 9 16V20H4V10Z"
+        stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+      <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#808080" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span>Shopping Cart</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+      <path d="M1 0.916676L5.08333 5.00001L1 9.08334" stroke="#808080" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <span>Checkout</span>
+  </div>
 </header>
 
 <body>
-    
+  <form class="personal-information">
+    <label>Billing Information</label>
+
+    <div>
+      <div>
+        <label>First name</label>
+        <input type="text" placeholder="Your first name">
+      </div>
+      <div>
+        <label>Last name</label>
+        <input type="text" placeholder="Your last name">
+      </div>
+      <div>
+        <label>Company Name <span>(optional)</span></label>
+        <input type="text" placeholder="Company name">
+      </div>
+    </div>
+
+    <label>Street Address</label>
+
+    <input type="text" placeholder="Address">
+
+    <div>
+      <div>
+        <label>Country / Region</label>
+        <select>
+          <option value="" disabled selected>Selects</option>
+          <option>Viet Nam</option>
+          <option>America</option>
+        </select>
+      </div>
+      <div>
+        <label>State</label>
+        <select>
+          <option value="" disabled selected>Selects</option>
+          <option>Ho Chi Minh</option>
+          <option>Binh Duong</option>
+          <option>Ha Noi</option>
+        </select>
+      </div>
+      <div>
+        <label>Zip Code</label>
+        <input type="text" placeholder="Zip Code">
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="Email address">
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" placeholder="Phone number">
+      </div>
+    </div>
+
+    <div>
+      <input type="checkbox" name="ship">
+      <label for="ship">Ship to a different address</label>
+    </div>
+
+    <div>
+      
+    </div>
+  </form>
 </body>
+
 </html>
