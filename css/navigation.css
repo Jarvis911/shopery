@@ -12,6 +12,7 @@
 
 html {
   padding: 0 24px;
+  min-width: 1200px;
 }
 
 header {
@@ -71,6 +72,8 @@ header {
   padding: 20px 0px;
   justify-content: space-between;
   align-items: center;
+  min-width: 1000px;
+
 }
 
 .logo {
@@ -87,6 +90,7 @@ header {
   font-weight: 500;
   line-height: 38px; /* 118.75% */
   letter-spacing: -0.96px;
+  flex-shrink: 0;
 }
 
 .search {
@@ -188,6 +192,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--Gray-Scale-Gray-900);
+  min-width: 1050px;
 }
 
 .page-icons {
