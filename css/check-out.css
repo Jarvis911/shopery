@@ -1101,3 +1101,12 @@ footer {
   flex-direction: row;
   gap: 2px;
 }
+
+/* Responsive */
+@media (max-width: 780px) {
+  form {
+    flex-direction: column;
+  }
+
+
+}
