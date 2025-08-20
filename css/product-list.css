@@ -222,6 +222,7 @@ body {
 
   /* Product in product list */
   &>div {
+    position: relative;
     border: 1px solid var(--Gray-Scale-Gray-100);
     border-radius: 8px;
     background: var(--Gray-Scale-White);
@@ -230,6 +231,9 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: flex-start;
+    transition: transform 0.15s ease;
+    transform-style: preserve-3d;
+    overflow: hidden;
 
     &>img {
       display: inline-flex;
@@ -240,6 +244,7 @@ body {
 
   &>div:hover {
     border-color: var(--Branding-Success-Dark);
+    transform: scale(1.05);
     box-shadow: 0px 0px 12px 0px rgba(32, 181, 38, 0.32);
 
     & .add-to-wish-list {
@@ -472,8 +477,8 @@ body {
     border-radius: 50%;
   }
 
-  & > div:first-child:hover,
-  > div:last-child:hover {
+  &>div:first-child:hover,
+  >div:last-child:hover {
     border-radius: 500px;
     border: 1px solid var(--Gray-Scale-Gray-100, #E6E6E6);
     background: var(--Gray-Scale-White, #FFF);
@@ -513,4 +518,31 @@ body {
   border-radius: 130px;
   background: var(--Branding-Success, #00B207);
   color: white;
+}
+
+@media(max-width: 780px) {
+  .product-list-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+
+    &>div {
+      & img {
+        width: 125px;
+        height: 125px;
+      }
+    }
+  }
+
+  .filter-left {
+    flex-direction: column;
+  }
+
+  .active-filter {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &>div:last-child {
+      margin-left: 0;
+    }
+  }
+
 }
