@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/navigation.css" />
-  <link rel="stylesheet" href="css/product-list.css" />
+  <link rel="stylesheet" href="../css/navigation.css" />
+  <link rel="stylesheet" href="../css/product-list.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/product-list.js"></script>
+  <script src="../js/product-list.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <title>Product List</title>
 </head>
@@ -15,35 +15,35 @@
   <div class="navigation">
     <div class="small-one">
       <div class="contact">
-        <img src="assets/images/Map Pin.svg" />
+        <img src="../../assets/images/Map Pin.svg" />
         <span>Store Location: Lincoln- 344, Illinois, Chicago, USA</span>
       </div>
       <div class="links">
         <div class="eng">
           <span>Eng</span>
-          <img src="assets/images/Group.svg" />
+          <img src="../../assets/images/Group.svg" />
         </div>
         <div class="usd">
           <span>USD</span>
-          <img src="assets/images/Group.svg" />
+          <img src="../../assets/images/Group.svg" />
         </div>
       </div>
     </div>
 
     <div class="middle">
       <div class="logo">
-        <img src="assets/images/plant 1.svg" />
+        <img src="../../assets/images/plant 1.svg" />
         <span>Ecobazar</span>
       </div>
       <div class="search">
         <div class="frame-7">
-          <img src="assets/images/Search.svg" />
+          <img src="../../assets/images/Search.svg" />
           <input type="search" placeholder="Search" />
         </div>
         <button type="button" class="button">Search</button>
       </div>
       <div class="call-now">
-        <img src="assets/images/PhoneCall 1.svg" />
+        <img src="../../assets/images/PhoneCall 1.svg" />
         <div class="info">
           <span>Customer Services</span>
           <span>(219) 555-0114</span>
@@ -51,64 +51,63 @@
       </div>
     </div>
 
-    <div class="nav-links">
-      <div class="page-links">
-        <div>
-          <div class="category-menu">
-            <img src="assets/images/menu 1.svg" />
-          </div>
-          <div class="all-category-menu">
-            <div>
-              <span>All Categories</span>
-              <img src="assets/images/Group_white.svg" />
+    <nav class="nav-links">
+            <div class="category-menu" id="hamburger">
+                <img src="../assets/images/menu 1.svg" />
             </div>
-          </div>
-        </div>
-        <div>
-          <span>Home</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
-            <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div>
-          <span>Shop</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
-            <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div>
-          <span>Pages</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
-            <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div>
-          <span>Blog</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
-            <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor" stroke-width="1.5"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <div>
-          <span>About Us</span>
-        </div>
-        <div>
-          <span>Contact Us</span>
-        </div>
-      </div>
+            <div class="page-links" id="menu">
+                    <div class="all-category-menu">
+                        <div>
+                            <span>All Categories</span>
+                            <img src="../assets/images/Group_white.svg" />
+                        </div>
+                    </div>
+                <div>
+                    <span>Home</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div>
+                    <span>Shop</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div>
+                    <span>Pages</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div>
+                    <span>Blog</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1.33341 1.66667L6.00008 6.33334L10.6667 1.66667" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div>
+                    <span>About Us</span>
+                </div>
+                <div>
+                    <span>Contact Us</span>
+                </div>
+            </div>
 
-      <div class="page-icons">
-        <img src="assets/images/Heart.svg" />
-        <div>
-          <img src="assets/images/Bag.svg" />
-          <div class="bag-number">2</div>
-        </div>
-        <img src="assets/images/user_3 1.svg" />
-      </div>
-    </div>
+            <div class="page-icons">
+                <img src="../assets/images/Heart.svg" />
+                <div>
+                    <img src="../assets/images/Bag.svg" />
+                    <div class="bag-number">2</div>
+                </div>
+                <img src="../assets/images/user_3 1.svg" />
+            </div>
+        </nav>
+    </nav>
   </div>
 </header>
 
@@ -258,7 +257,7 @@
           stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-  </div>
+  </div>   
 </body>
 
 <footer>
@@ -336,7 +335,7 @@
   <div class="footer-middle">
     <div class="footer-middle__company">
       <div>
-        <img src="assets/images/plant 1.svg" />
+        <img src="../../assets/images/plant 1.svg" />
         <span>Ecobazar</span>
       </div>
       <span>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis

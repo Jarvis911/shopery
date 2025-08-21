@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $.ajax({
-    url: "./assets/products.json",
+    url: "../assets/products.json",
     method: "GET",
     dataType: "json",
     success: function (products) {
@@ -9,7 +9,7 @@ $(document).ready(function () {
       products.forEach((p) => {
         let product = `
                         <div>
-                    <img src="${p.image}" alt=${p.name}/>
+                    <img src="${p.image}" alt=${p.name} onclick="window.location.href='http://127.0.0.1:5500/other-pages/product-detail.html'"/>
                     <div class="add-to-wish-list">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ $(document).ready(function () {
                     </svg>
                     </div>
                     <div class="top-product__feature-product__body">
-                    <div><span>${p.name}</span><span>${p.price}</span></div>
+                    <div><span>${p.name}</span><span>$${p.price}</span></div>
                     <div>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"

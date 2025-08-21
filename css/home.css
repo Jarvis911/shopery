@@ -21,6 +21,7 @@ header {
 
 .feature {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   background: var(--Gray-Scale-White);
@@ -210,6 +211,7 @@ header {
 .main-bannar {
   font-family: "Poppins";
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-direction: flex-start;
@@ -218,6 +220,7 @@ header {
 
   & > div {
     height: 536px;
+    min-width: 300px;
     border-radius: 8px;
     background-position: center;
     background-size: cover;
@@ -474,7 +477,9 @@ header {
 .top-category__feature-product {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 8px;
   margin-top: 36px;
 
   /* First feature banner */
@@ -912,6 +917,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 16px;
   width: 100%;
 
   & .team-bannar__cards__card:first-child {
@@ -1168,6 +1174,7 @@ header {
 
 .company-logo {
   display: flex;
+  flex-wrap: wrap;
   padding: 60px;
   justify-content: space-between;
   align-items: center;

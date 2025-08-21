@@ -2,61 +2,61 @@
   {
     "name": "Red Chili",
     "price": 14.99,
-    "image": "assets/images/pd-list-1.png"
+    "image": "../assets/images/pd-list-1.png"
   },
   {
     "name": "Big Potatos",
     "price": 9.99,
-    "image": "assets/images/pd-list-2.png"
+    "image": "../assets/images/pd-list-2.png"
   },
   {
     "name": "Chanise Cabbage",
     "price": 9.99,
-    "image": "assets/images/pd-list-3.png"
+    "image": "../assets/images/pd-list-3.png"
   },
   {
     "name": "Ladies Finger",
     "price": 9.99,
-    "image": "assets/images/pd-list-4.png"
+    "image": "../assets/images/pd-list-4.png"
   },
   {
     "name": "Red Tomato",
     "price": 9.99,
-    "image": "assets/images/pd-list-5.png"
+    "image": "../assets/images/pd-list-5.png"
   },
   {
     "name": "Eggplant",
     "price": 9.99,
-    "image": "assets/images/pd-list-6.png"
+    "image": "../assets/images/pd-list-6.png"
   },
   {
     "name": "Fresh Cauliflower",
     "price": 9.99,
-    "image": "assets/images/pd-list-7.png"
+    "image": "../assets/images/pd-list-7.png"
   },
   {
     "name": "Green Apple",
     "price": 9.99,
-    "image": "assets/images/pd-list-8.png"
+    "image": "../assets/images/pd-list-8.png"
   },
   {
     "name": "Fresh Mango",
     "price": 9.99,
-    "image": "assets/images/pd-list-9.png"
+    "image": "../assets/images/pd-list-9.png"
   },
   {
     "name": "Green Capsicum",
     "price": 9.99,
-    "image": "assets/images/pd-list-10.png"
+    "image": "../assets/images/pd-list-10.png"
   },
   {
     "name": "Green Chili",
     "price": 9.99,
-    "image": "assets/images/pd-list-11.png"
+    "image": "../assets/images/pd-list-11.png"
   },
   {
     "name": "Green Cucumber",
     "price": 9.99,
-    "image": "assets/images/pd-list-12.png"
+    "image": "../assets/images/pd-list-12.png"
   }
 ]
