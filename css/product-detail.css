@@ -106,14 +106,15 @@ body {
 
 .navigation_middle {
   width: 100%;
-  height: 93px;
   background: var(--Gray-Scale-White, #FFF);
   box-shadow: 0 -1px 0 0 #E5E5E5 inset;
+  margin-top: 16px;
+  padding-bottom: 16px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-width: 1000px;
 
 }
 
@@ -277,23 +278,17 @@ body {
 
 @media (max-width:780px) {
   .navigation_bottom {
-
     min-width: 80%;
     width: 99%;
-
   }
 
   .navigation_middle {
     width: 100%;
-    height: 93px;
     background: var(--Gray-Scale-White, #FFF);
     box-shadow: 0 -1px 0 0 #E5E5E5 inset;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    min-width: 850px;
-
   }
 
   .navigation_middle_sreach>div {
@@ -2252,6 +2247,13 @@ footer {
   background-color: var(--Branding-Success);
 }
 
+.category-menu {
+  display: none;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--Branding-Success);
+}
 
 @media(max-width: 768px) {
   .product-list-grid {
@@ -2264,4 +2266,24 @@ footer {
       }
     }
   }
+
+  .category-menu {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .navigation_bottom_nav-link {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 210px;
+    background-color:#1A1A1A;
+    z-index: 1000;
+  }
+
+  .navigation_bottom_nav-link.active {
+    display: flex;
+  } 
 }
+
+

@@ -6,3 +6,10 @@ document.querySelectorAll('input[type="radio"]').forEach(radio => {
       this.wasChecked = this.checked;
     });
   });
+
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
