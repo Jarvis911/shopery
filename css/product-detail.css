@@ -216,6 +216,10 @@ body {
   flex-shrink: 0;
   display: flex;
   margin-right: 12px;
+} 
+
+.navigation_middle_icon_bag {
+  cursor: pointer;
 }
 
 .navigation_middle_icon_bag>span {

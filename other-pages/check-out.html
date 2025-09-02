@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Check out</title>
   <link rel="stylesheet" href="../css/check-out.css" />
-  <script src="../js/check-out.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 </head>
 
@@ -43,13 +42,13 @@
 
   <div class="navigation_middle">
     <div class="navigation_middle_logo">
-      <img src="../assets/images/plant 1.svg" />
+      <img alt="logo" src="../assets/images/plant 1.svg" />
       <span>Ecobazar</span>
     </div>
 
     <div class="navigation_middle_sreach">
       <div>
-        <img src="../assets/images/Search (1).svg" />
+        <img alt="search" src="../assets/images/Search (1).svg" />
         <input type="text" placeholder="Search" />
       </div>
       <button class="navigation_middle_sreach_button">Search</button>
@@ -83,9 +82,8 @@
   </div>
 
   <div class="navigation_bottom">
-
-      <div class="category-menu" id="hamburger">
-          <img src="../assets/images/menu 1.svg" />
+      <div class="category-menu" id="hamburger" aria-label="Open menu toggle">
+          <img alt="menu" src="../assets/images/menu 1.svg" />
       </div>
 
     <div class="navigation_bottom_nav-link" id="menu">
@@ -161,26 +159,26 @@
       <div>
         <div>
           <label>First name</label>
-          <input type="text" placeholder="Your first name">
+          <input type="text" placeholder="Your first name" id="first-name">
         </div>
         <div>
           <label>Last name</label>
-          <input type="text" placeholder="Your last name">
+          <input type="text" placeholder="Your last name" id="last-name">
         </div>
         <div>
           <label>Company Name <span>(optional)</span></label>
-          <input type="text" placeholder="Company name">
+          <input type="text" placeholder="Company name" id="company-name">
         </div>
       </div>
 
       <label>Street Address</label>
 
-      <input type="text" placeholder="Address">
+      <input type="text" placeholder="Address" id="street-address">
 
       <div>
         <div>
           <label>Country / Region</label>
-          <select>
+          <select id="select-country">
             <option value="" disabled selected>Selects</option>
             <option>Viet Nam</option>
             <option>America</option>
@@ -188,7 +186,7 @@
         </div>
         <div>
           <label>State</label>
-          <select>
+          <select id="select-state">
             <option value="" disabled selected>Selects</option>
             <option>Ho Chi Minh</option>
             <option>Binh Duong</option>
@@ -197,23 +195,23 @@
         </div>
         <div>
           <label>Zip Code</label>
-          <input type="text" placeholder="Zip Code">
+          <input type="text" placeholder="Zip Code" id="zip-code">
         </div>
       </div>
 
       <div>
         <div>
           <label>Email</label>
-          <input type="email" placeholder="Email address">
+          <input type="email" placeholder="Email address" id="email-address">
         </div>
         <div>
           <label>Phone</label>
-          <input type="tel" placeholder="Phone number">
+          <input type="tel" placeholder="Phone number" id="phone-number">
         </div>
       </div>
 
       <div>
-        <input type="checkbox" name="ship">
+        <input type="checkbox" name="ship" id="ship">
         <label for="ship">Ship to a different address</label>
       </div>
 
@@ -223,7 +221,7 @@
       <label>Additional Info</label>
       <div>
         <label>Order Notes (Optional)</label>
-        <input type="text" placeholder="Notes about your order, e.g. special notes for delivery">
+        <input id="additional-info" type="text" placeholder="Notes about your order, e.g. special notes for delivery">
       </div>
     </div>
 
@@ -234,7 +232,7 @@
       <div class="product-checkout-list">
         <div>
           <div>
-            <img src="../assets/images/pd-list-1.png">
+            <img alt="list" src="../assets/images/pd-list-1.png">
             <span>Green Capsicum</span>
             <span>x5</span>
           </div>
@@ -243,7 +241,7 @@
 
         <div>
           <div>
-            <img src="../assets/images/pd-list-1.png">
+            <img alt="list" src="../assets/images/pd-list-1.png">
             <span>Green Capsicum</span>
             <span>x5</span>
           </div>
@@ -252,11 +250,11 @@
       </div>
 
       <div class="total-shipping">
-        <div><span>Subtotal:</span><span>$84.00</span></div>
+        <div><span>Subtotal:</span><span>$140.00</span></div>
         <div></div>
         <div><span>Shipping:</span><span>Free</span></div>
         <div></div>
-        <div><span>Total:</span><span>$84.00</span></div>
+        <div><span>Total:</span><span>$140.00</span></div>
       </div>
 
       <div class="payment-method">
@@ -498,5 +496,7 @@
     </div>
   </div>
 </footer>
+
+  <script src="../js/check-out.js" defer></script>
 
 </html>

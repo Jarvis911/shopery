@@ -1,3 +1,35 @@
+// Timer
+
+let time = JSON.parse(localStorage.getItem("time")) || {
+      totalsecond: 3 * 24 * 3600 + 2 * 3600 + 18 * 60 + 46, 
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0
+};
+
+let timer = setInterval(() => {
+    time.days = Math.floor(time.totalsecond / (24 * 3600));
+    time.hours = Math.floor((time.totalsecond % (24 * 3600)) / 3600);
+    time.minutes = Math.floor((time.totalsecond % 3600) / 60);
+    time.seconds = time.totalsecond % 60;
+
+    document.getElementById("days").innerText = (time.days).toString().padStart(2, "0");
+    document.getElementById("hours").innerText = (time.hours).toString().padStart(2, "0");
+    document.getElementById("minutes").innerText = (time.minutes).toString().padStart(2, "0");
+    document.getElementById("seconds").innerText = (time.seconds).toString().padStart(2, "0");
+
+    time.totalsecond--;
+    localStorage.setItem("time", JSON.stringify(time));
+    if (time.totalsecond <= 0) {
+        clearInterval(timer);
+        localStorage.removeItem("time");
+    }
+}, 1000);
+
+
+// Load data from json files
+
 $(document).ready(function () {
   $.ajax({
     url: "../assets/products.json",

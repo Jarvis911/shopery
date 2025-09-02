@@ -167,6 +167,11 @@ header {
   }
 }
 
+.btn-shop-now:hover {
+  cursor: pointer;
+}
+
+
 .left-categories-menu {
   display: inline-flex;
   flex-direction: column;
@@ -457,14 +462,18 @@ header {
     gap: 16px;
     border: 1px solid var(--Gray-Scale-Gray-100);
     background: var(--Gray-Scale-White);
+    transition: transform 0.1s ease-in-out;
   }
 
   & > div:hover {
     border: 1px solid var(--Branding-Success-Dark);
     box-shadow: 0px 0px 12px 0px rgba(32, 181, 38, 0.32);
     color: var(--Branding-Success-Dark);
+    transform: scale(1.05);
   }
 }
+
+
 
 /* Top product */
 .top-product {
@@ -531,6 +540,7 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: transform 0.1s ease-in-out;
 
     & > img {
       display: inline-flex;
@@ -543,6 +553,7 @@ header {
   & > div:hover {
     border-color: var(--Branding-Success-Dark);
     box-shadow: 0px 0px 12px 0px rgba(32, 181, 38, 0.32);
+    transform: scale(1.05);
 
     & .add-to-wish-list {
       display: flex;
@@ -681,6 +692,7 @@ header {
   width: 312px;
   border: 1px solid var(--Gray-Scale-Gray-100);
   background: var(--Gray-Scale-White);
+  transition: transform 0.1s ease-in-out;
 }
 
 .hot-deals__items__buttons {
@@ -702,6 +714,7 @@ header {
 .hot-deals__items:hover {
   border: 1px solid var(--Branding-Success-Dark);
   box-shadow: 0px 0px 12px 0px rgba(32, 181, 38, 0.32);
+  transform: scale(1.05);
 
   /* Hiding price and rating when hover */
   & .hot-deals__items__info span:nth-child(2) {

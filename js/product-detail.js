@@ -4,8 +4,7 @@ let quantities = JSON.parse(localStorage.getItem("quantities")) || {
   total: 0,
 };
 
-document.getElementById("cart-total").textContent =
-  "$" + quantities.total.toFixed(2);
+document.getElementById("cart-total").textContent = "$" + quantities.total.toFixed(2);
 document.getElementById("cart-count").textContent = quantities.count;
 
 function changequantity(amount) {
@@ -15,6 +14,7 @@ function changequantity(amount) {
   }
   document.getElementById("quantity").textContent = quantities.quantity;
 }
+
 function addtocardt() {
   quantities.count += quantities.quantity;
   quantities.total = quantities.count * 17.28;
