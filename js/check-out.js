@@ -107,6 +107,6 @@ form.addEventListener("submit", function (e) {
     alert("Your order has been received!");
     form.submit();
 
-    localStorage.setItem("quantities", {"quantity": 1, "count": 0, "total": 0});
+    localStorage.setItem("quantities", JSON.stringify({"quantity": 1, "count": 0, "total": 0}));
   }
 })

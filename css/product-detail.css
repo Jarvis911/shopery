@@ -1168,6 +1168,7 @@ body {
   .product-detail_description_body {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .product-detail_description_body_right.active {
@@ -1176,10 +1177,6 @@ body {
     width: 535px;
     height: 415px;
     margin-top: 50px;
-
-
-
-
   }
 
 
@@ -2280,7 +2277,7 @@ footer {
     display: none;
     flex-direction: column;
     position: absolute;
-    bottom: 210px;
+    bottom: 505px;
     background-color:#1A1A1A;
     z-index: 1000;
   }
