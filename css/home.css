@@ -1206,3 +1206,9 @@ header {
     color: var(--Branding-Success);
   }
 }
+
+@media(max-width: 780px) {
+  .top-category__feature-product {
+    justify-content: space-around;
+  }
+}
